@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      force: true
+      relink: true
+      create: true
+    shell:
+      stderr: true
+      stdin: true
+      stdout: true
+
+- clean: ['~']
+
+- shell:
+  - [sh pre-install.sh, Running pre installation script]
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/themes/fino-time-modified.zsh-theme: zsh/themes/fino-time-modified.zsh-theme
