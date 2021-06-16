@@ -25,10 +25,12 @@ ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"
 
 # Override zsh highlighting plugin styles
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#d7d75f'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#d78700'
-ZSH_HIGHLIGHT_STYLES[path]='fg=#ffffff'
-ZSH_HIGHLIGHT_STYLES[default]='fg=#aaaaaa'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#d7d75f'
+ZSH_HIGHLIGHT_STYLES[autodirectory]='none'
+ZSH_HIGHLIGHT_STYLES[path]='none'
+ZSH_HIGHLIGHT_STYLES[precommand]='none'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='none'
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#cf0000'
 
 export VIRTUAL_ENV_DISABLE_PROMPT=true
