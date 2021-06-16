@@ -17,3 +17,4 @@
 - link:
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/fino-time-modified.zsh-theme: zsh/themes/fino-time-modified.zsh-theme
+    ~/.gitconfig: git/gitconfig
