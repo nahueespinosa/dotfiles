@@ -9,8 +9,8 @@ ZSH_THEME="fino-time-modified"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
-    git
-    zsh-syntax-highlighting
+  git
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

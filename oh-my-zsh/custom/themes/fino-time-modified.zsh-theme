@@ -1,16 +1,16 @@
 # fino-time-modified.zsh-theme
 
 function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
+  [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '⠵' && return
+  git branch >/dev/null 2>/dev/null && echo '⠵' && return
     echo '○'
 }
 
 function box_name {
-    [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
+  [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
 }
 
 PROMPT="╭─\$(virtualenv_info)%{$FG[042]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[032]%}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$FG[185]%}%~%{$reset_color%}\$(git_prompt_info)\$(ruby_prompt_info) %D - %*
