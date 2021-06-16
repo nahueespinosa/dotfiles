@@ -12,8 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Create install directory
-        run: mkdir -p ~/dotfiles-install-dir
-
       - name: Install dotfiles
-        run: HOME=~/dotfiles-install-dir ./install
+        run: ./install
