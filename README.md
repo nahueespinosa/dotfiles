@@ -1,4 +1,4 @@
-# Dotfiles
+# Dotfiles [![CI](https://github.com/nahueespinosa/.dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/nahueespinosa/.dotfiles/actions/workflows/build.yml)
 
 After cloning this repo, run install to automatically set up the development environment. Note that the install script is idempotent: it can safely be run multiple times.
 
