@@ -8,7 +8,18 @@ ZSH_THEME="fino-time-modified"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git)
+# Override zsh highlight styles
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#d7d75f'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#d78700'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#ffffff'
+ZSH_HIGHLIGHT_STYLES[default]='fg=#aaaaaa'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#cf0000'
+
+plugins=(
+    git
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
