@@ -2,8 +2,6 @@ name: CI
 
 on:
   push:
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -11,6 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install zsh
+        run: sudo apt-get install zsh -y --no-install-recommends
 
       - name: Install dotfiles
         run: ./install
