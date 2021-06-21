@@ -18,4 +18,6 @@
     ~/.gitconfig: git/gitconfig
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/custom: oh-my-zsh/custom
+    ~/.vimrc: vim/vimrc
     ~/.tmux.conf: tmux/tmux.conf
+
