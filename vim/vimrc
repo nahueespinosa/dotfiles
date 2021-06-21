@@ -20,8 +20,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-nnoremap <CR> :noh<CR><CR> " Hit return to make highlight dissapear after search
+nnoremap <CR> :noh<CR><CR> " Hit return to make highlight disappear after search
 
 " Misc
 set noerrorbells
