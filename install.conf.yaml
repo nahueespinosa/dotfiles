@@ -21,4 +21,3 @@
     ~/.vimrc: vim/vimrc
     ~/.vim: vim/custom
     ~/.tmux.conf: tmux/tmux.conf
-
