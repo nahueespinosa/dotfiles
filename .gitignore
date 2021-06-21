@@ -1,2 +1,2 @@
-vim/custom/autoload/plug.vim
 vim/custom/plugged
+vim/custom/.*
