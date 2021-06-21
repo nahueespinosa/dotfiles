@@ -3,9 +3,27 @@ syntax on
 colorscheme monokai
 set number
 set cursorline
+set showmatch
 
 " Editing
 set autoindent
+set smartindent
+set expandtab
+set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set expandtab
+set smarttab
+set nowrap
+
+" Search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+nnoremap <CR> :noh<CR><CR> " Hit return to make highlight dissapear after search
+
+" Misc
+set noerrorbells
+set novisualbell
+set nobackup
