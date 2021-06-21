@@ -1,6 +1,6 @@
 " Syntax and colors
 syntax on
-colorscheme industry
+colorscheme monokai
 set number
 set cursorline
 
