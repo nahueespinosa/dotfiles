@@ -21,3 +21,6 @@
     ~/.vimrc: vim/vimrc
     ~/.vim: vim/custom
     ~/.tmux.conf: tmux/tmux.conf
+
+- shell:
+  - [vim +'PlugInstall --sync' +qa, Installing vim plugins]
