@@ -17,6 +17,7 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.zshrc: zsh/zshrc
+    ~/.p10k.zsh: zsh/p10k.zsh
     ~/.oh-my-zsh/custom: oh-my-zsh/custom
     ~/.vimrc: vim/vimrc
     ~/.vim: vim/custom
