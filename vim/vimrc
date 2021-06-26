@@ -41,8 +41,9 @@ let g:netrw_altv = 1
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'git@github.com:tpope/vim-fugitive'
+Plug 'git@github.com:tpope/vim-fugitive.git'
 Plug 'git@github.com:Valloric/YouCompleteMe.git', { 'do': './install.py' }
+Plug 'git@github.com:preservim/nerdtree.git'
 
 call plug#end()
 
