@@ -4,17 +4,12 @@ function virtualenv_info {
   [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-function prompt_char {
-  git branch >/dev/null 2>/dev/null && echo '⠵' && return
-    echo '○'
-}
-
 function box_name {
   [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
 }
 
-PROMPT="╭─\$(virtualenv_info)%{$FG[042]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[032]%}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$FG[185]%}%~%{$reset_color%}\$(git_prompt_info)\$(ruby_prompt_info) %D - %*
-╰─\$(prompt_char) "
+PROMPT="╭─\$(virtualenv_info)%{$FG[042]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[032]%}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$FG[185]%}%~%{$reset_color%}\$(git_prompt_info)\$(ruby_prompt_info) %*
+╰─○ " 
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -25,12 +20,12 @@ ZSH_THEME_RUBY_PROMPT_SUFFIX="›%{$reset_color%}"
 
 # Override zsh highlighting plugin styles
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#d78700'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#d7d75f'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#d7d75f'
+ZSH_HIGHLIGHT_STYLES[arg0]='none'
 ZSH_HIGHLIGHT_STYLES[autodirectory]='none'
 ZSH_HIGHLIGHT_STYLES[path]='none'
 ZSH_HIGHLIGHT_STYLES[precommand]='none'
 ZSH_HIGHLIGHT_STYLES[suffix-alias]='none'
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#cf0000'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#8e8e8e'
 
 export VIRTUAL_ENV_DISABLE_PROMPT=true
