@@ -65,6 +65,12 @@ set ruler
 set cursorline
 set colorcolumn=80
 set t_Co=256
-colorscheme onehalfdark
-highlight ColorColumn ctermbg=0 guibg=lightgrey 
-highlight Normal guibg=NONE ctermbg=NONE
+
+try
+  colorscheme onehalfdark
+  highlight ColorColumn ctermbg=0 guibg=lightgrey 
+  highlight Normal guibg=NONE ctermbg=NONE
+catch
+  colorscheme default
+  set background=dark
+endtry
