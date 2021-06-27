@@ -12,21 +12,21 @@
   ignore = dirty
 [submodule "vim/custom/pack/remote/start/lightline.vim"]
   path = vim/custom/pack/remote/start/lightline.vim
-  url = git@github.com:itchyny/lightline.vim
+  url = https://github.com/itchyny/lightline.vim
   ignore = dirty
 [submodule "vim/custom/pack/remote/start/nerdtree"]
   path = vim/custom/pack/remote/start/nerdtree
-  url = git@github.com:preservim/nerdtree.git
+  url = https://github.com/preservim/nerdtree.git
   ignore = dirty
 [submodule "vim/custom/pack/remote/start/YouCompleteMe"]
   path = vim/custom/pack/remote/start/YouCompleteMe
-  url = git@github.com:Valloric/YouCompleteMe.git
+  url = https://github.com/Valloric/YouCompleteMe.git
   ignore = dirty
 [submodule "vim/custom/pack/remote/start/onehalf"]
   path = vim/custom/pack/remote/start/onehalf
-  url = git@github.com:sonph/onehalf.git
+  url = https://github.com/sonph/onehalf.git
   ignore = dirty
 [submodule "vim/custom/pack/remote/start/vim-fugitive"]
   path = vim/custom/pack/remote/start/vim-fugitive
-  url = git@github.com:tpope/vim-fugitive.git
+  url = https://github.com/tpope/vim-fugitive.git
   ignore = dirty
