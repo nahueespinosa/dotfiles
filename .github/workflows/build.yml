@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Ubuntu post-installation script
-        run: ./ubuntu-post-install
+      - name: Ubuntu installation script
+        run: ./ubuntu-install
 
       - name: Install dotfiles
         run: ./install
