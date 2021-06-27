@@ -51,6 +51,8 @@ set cursorline
 set colorcolumn=80
 set t_Co=256
 
+set runtimepath+=~/.vim/pack/remote/start/onehalf/vim
+
 try
   colorscheme onehalfdark
   highlight ColorColumn ctermbg=0 guibg=lightgrey 
