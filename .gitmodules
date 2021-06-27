@@ -2,11 +2,29 @@
   path = dotbot
   url = https://github.com/anishathalye/dotbot
   ignore = dirty
-[submodule "oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
-  path = oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+[submodule "lightline.vim"]
+  path = vim/plugins/lightline.vim
+  url = https://github.com/itchyny/lightline.vim
+  ignore = dirty
+[submodule "nerdtree"]
+  path = vim/plugins/nerdtree
+  url = https://github.com/preservim/nerdtree.git
+  ignore = dirty
+[submodule "YouCompleteMe"]
+  path = vim/plugins/YouCompleteMe
+  url = https://github.com/Valloric/YouCompleteMe.git
+  ignore = dirty
+[submodule "onehalf"]
+  path = vim/plugins/onehalf
+  url = https://github.com/sonph/onehalf.git
+  ignore = dirty
+[submodule "vim-fugitive"]
+  path = vim/plugins/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive.git
+  ignore = dirty
+[submodule "zsh-syntax-highlighting"]
+  path = oh-my-zsh/plugins/zsh-syntax-highlighting
   url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-  ignore = dirty
-[submodule "oh-my-zsh/custom/themes/powerlevel10k"]
-  path = oh-my-zsh/custom/themes/powerlevel10k
+[submodule "powerlevel10k"]
+  path = oh-my-zsh/themes/powerlevel10k
   url = https://github.com/romkatv/powerlevel10k.git
-  ignore = dirty
