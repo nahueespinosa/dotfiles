@@ -1,3 +1,20 @@
 [user]
   name = Nahuel Espinosa
   email = nahue.espinosa@gmail.com
+[alias]
+  # List available aliases
+  aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+  # Shortcuts
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  # Cleaner log
+  lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset %Cgreen(%an)%Creset%C(auto)%d%Creset %s'
+[core]
+  pager = cat
+  editor = vim
+[diff]
+  mnemonicPrefix = true
+[log]
+  abbrevCommit = true
