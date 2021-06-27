@@ -43,21 +43,6 @@ let g:lightline = {
       \ },
       \ }
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'git@github.com:tpope/vim-fugitive.git'
-Plug 'git@github.com:Valloric/YouCompleteMe.git', { 'do': './install.py' }
-Plug 'git@github.com:preservim/nerdtree.git'
-Plug 'git@github.com:sonph/onehalf.git', { 'rtp': 'vim' }
-Plug 'git@github.com:itchyny/lightline.vim'
-
-call plug#end()
-
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
-
 " Syntax and colors
 syntax on
 set number

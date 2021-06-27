@@ -13,6 +13,7 @@
 - shell:
   - [sh pre-install.sh, Running pre installation script]
   - [git submodule update --init --recursive, Installing submodules]
+  - [vim/custom/pack/remote/start/YouCompleteMe/install.py, Installing YouCompleteMe]
 
 - link:
     ~/.gitconfig: git/gitconfig
@@ -22,6 +23,3 @@
     ~/.vimrc: vim/vimrc
     ~/.vim: vim/custom
     ~/.tmux.conf: tmux/tmux.conf
-
-- shell:
-  - [vim +'PlugInstall --sync' +qa, Installing vim plugins]
