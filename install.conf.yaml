@@ -17,7 +17,6 @@
       recursive: true
 
 - shell:
-  - [sh pre-install.sh, Running pre installation script]
   - [git submodule update --init --recursive, Installing submodules]
   - [vim/plugins/YouCompleteMe/install.py, Installing YouCompleteMe]
 
@@ -25,8 +24,8 @@
     ~/.gitconfig: git/gitconfig
     ~/.zshrc: zsh/zshrc
     ~/.p10k.zsh: zsh/p10k.zsh
-    ~/.oh-my-zsh/custom/plugins: oh-my-zsh/plugins
-    ~/.oh-my-zsh/custom/themes: oh-my-zsh/themes
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.oh-my-zsh/custom: zsh/oh-my-zsh-custom
     ~/.vimrc: vim/vimrc
     ~/.vim/pack/remote/start: vim/plugins
     ~/.tmux.conf: tmux/tmux.conf
