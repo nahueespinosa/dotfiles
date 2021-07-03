@@ -7,7 +7,7 @@ Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
 ## Requirements
 
-This configuration files have been tested with:
+These configuration files have been tested with:
 
 - `zsh 5.8`
 - `git 2.25.1`
@@ -32,7 +32,7 @@ Install dotfiles:
 ~/.dotfiles/install
 ```
 
-Make `zsh` you default shell if you haven't already:
+Make `zsh` your default shell if you haven't already:
 
 ```bash
 chsh -s $(which zsh)
