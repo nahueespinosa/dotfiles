@@ -21,3 +21,5 @@
   mnemonicPrefix = true
 [log]
   abbrevCommit = true
+[push]
+  default = current
