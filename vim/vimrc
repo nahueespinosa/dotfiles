@@ -8,6 +8,7 @@ set smarttab
 set nowrap
 set list
 set listchars=tab:··,trail:·,nbsp:⎵
+set clipboard=unnamedplus
 
 " Search
 set hlsearch
