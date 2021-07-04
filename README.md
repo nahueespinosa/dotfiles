@@ -9,15 +9,12 @@ Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
 These configuration files have been tested in `Ubuntu 20.04` with:
 
-- `zsh 5.8`
-- `git 2.25.1`
-- `vim 8.1.2269`
-- `tmux 3.0a`
 - `alacritty 0.8.0`
-
-Plugin requirements:
-
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe/tree/master#requirements)
+- `git 2.25.1`
+- `python 3.8.10`
+- `tmux 3.0a`
+- `vim 8.1.2269`
+- `zsh 5.8`
 
 ## Installation
 
