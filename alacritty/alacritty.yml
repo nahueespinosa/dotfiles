@@ -5,6 +5,9 @@ window:
   startup_mode: Maximized
 
 colors:
+  primary:
+    background: '#0B0B0D'
+    foreground: '#DCDFE4'
   normal:
     black:   '#0C0C0C'
     red:     '#E06C75'
