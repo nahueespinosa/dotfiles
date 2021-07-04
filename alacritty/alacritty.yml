@@ -4,6 +4,25 @@ window:
   decorations: none
   startup_mode: Maximized
 
+font:
+  normal:
+    family: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 10
+
 colors:
   primary:
     background: '#0B0B0D'
