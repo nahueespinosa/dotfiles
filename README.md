@@ -7,12 +7,13 @@ Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
 ## Requirements
 
-These configuration files have been tested with:
+These configuration files have been tested in `Ubuntu 20.04` with:
 
 - `zsh 5.8`
 - `git 2.25.1`
 - `vim 8.1.2269`
 - `tmux 3.0a`
+- `alacritty 0.8.0`
 
 Plugin requirements:
 
@@ -37,3 +38,7 @@ Make `zsh` your default shell if you haven't already:
 ```bash
 chsh -s $(which zsh)
 ```
+
+## License
+
+[MIT](LICENSE)
