@@ -31,3 +31,6 @@ export EDITOR=$VISUAL
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Fix awkward color scheme for ls in WSL
+export LS_COLORS="$LS_COLORS:ow=1;35:tw=1;35:"
