@@ -34,3 +34,9 @@
   path = zsh/oh-my-zsh
   url = https://github.com/ohmyzsh/ohmyzsh.git
   ignore = dirty
+[submodule "fzf.vim"]
+  path = vim/plugins/fzf.vim
+  url = git@github.com:junegunn/fzf.vim.git
+[submodule "fzf"]
+  path = vim/plugins/fzf
+  url = git@github.com:junegunn/fzf.git
