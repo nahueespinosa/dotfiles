@@ -36,7 +36,7 @@
   ignore = dirty
 [submodule "fzf.vim"]
   path = vim/plugins/fzf.vim
-  url = git@github.com:junegunn/fzf.vim.git
+  url = https://github.com/junegunn/fzf.vim.git
 [submodule "fzf"]
   path = vim/plugins/fzf
-  url = git@github.com:junegunn/fzf.git
+  url = https://github.com/junegunn/fzf.git
