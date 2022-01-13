@@ -9,7 +9,6 @@ Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
 These configuration files have been tested in `Ubuntu 20.04` with:
 
-- `alacritty 0.8.0`
 - `cmake 3.16.3`
 - `git 2.25.1`
 - `python 3.8.10`
