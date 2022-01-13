@@ -20,4 +20,3 @@ sudo apt-get install -y --no-install-recommends \
   vim-gtk3 \
   zsh
 
-sudo snap install alacritty --classic

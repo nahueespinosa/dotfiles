@@ -29,4 +29,3 @@
     ~/.vimrc: vim/vimrc
     ~/.vim/pack/remote/start: vim/plugins
     ~/.tmux.conf: tmux/tmux.conf
-    ~/.alacritty.yml: alacritty/alacritty.yml
