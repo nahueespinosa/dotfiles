@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "cmake.configureOnOpen": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "all",
+    "workbench.editor.untitled.hint": "hidden",
+    "terminal.integrated.scrollback": 10000,
+    "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'monospace', monospace, 'Droid Sans Fallback'"
+}

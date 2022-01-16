@@ -29,3 +29,4 @@
     ~/.vimrc: vim/vimrc
     ~/.vim/pack/remote/start: vim/plugins
     ~/.tmux.conf: tmux/tmux.conf
+    ~/.config/Code/User/settings.json: vscode/settings.json
