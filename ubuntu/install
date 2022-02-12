@@ -66,4 +66,4 @@ newgrp docker   # activate group changes
 sudo systemctl restart docker
 
 # Make zsh the default shell
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $(whoami)
