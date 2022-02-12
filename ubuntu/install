@@ -22,6 +22,7 @@ sudo apt-get install -y --no-install-recommends \
   tmux \
   vim \
   vim-gtk3 \
+  wireguard \
   zsh
 
 # Add docker package source
@@ -38,23 +39,29 @@ echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.micr
 rm -f packages.microsoft.gpg
 
 # Add google-cloud-sdk package source
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" \
   | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
 
 # Add nvidia-docker2 source
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-  && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
-  && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list \
+  && curl -fsSL https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
+  && curl -fsSL https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list \
   | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+# Add openvpn3 source
+curl -fsSL https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/openvpn-repo-pkg-keyring.gpg
+curl -fsSL "https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-$(lsb_release -cs).list" \
+  | sudo tee /etc/apt/sources.list.d/openvpn3.list
 
 # Install more packages
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
   code \
   docker-ce \
+  google-cloud-sdk \
   nvidia-docker2 \
-  google-cloud-sdk
+  openvpn3
 
 # Install docker compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
