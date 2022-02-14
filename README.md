@@ -5,6 +5,8 @@ I **do not recommend** installing them unless you're willing to overwrite the do
 
 Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
+![Screenshot](misc/screenshot.png)
+
 ## Requirements
 
 These configuration files have been tested in `Ubuntu 20.04` with:
