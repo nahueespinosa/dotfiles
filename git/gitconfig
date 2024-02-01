@@ -22,4 +22,5 @@
 [log]
   abbrevCommit = true
 [push]
+  autoSetupRemote = true
   default = current
