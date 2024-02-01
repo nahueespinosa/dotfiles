@@ -60,6 +60,7 @@ sudo apt-get install -y --no-install-recommends \
   code \
   docker-ce \
   google-cloud-sdk \
+  nvidia-cuda-toolkit \
   nvidia-docker2 \
   openvpn3
 
