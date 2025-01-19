@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-# Install common packages
+set -e
+
+###############################################################################
+# Common packages
+###############################################################################
+
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
   apt-transport-https \
@@ -8,7 +13,6 @@ sudo apt-get install -y --no-install-recommends \
   ca-certificates \
   curl \
   cmake \
-  docker \
   git \
   gnupg \
   htop \
@@ -22,56 +26,48 @@ sudo apt-get install -y --no-install-recommends \
   tmux \
   vim \
   vim-gtk3 \
-  wireguard \
   zsh
 
-# Add docker package source
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" \
-  | sudo tee /etc/apt/sources.list.d/docker.list
+###############################################################################
+# Docker
+###############################################################################
 
-# Add code package source
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
-  | sudo tee /etc/apt/sources.list.d/vscode.list
-rm -f packages.microsoft.gpg
+# Set up `apt` repository
+DOCKER_KEYRING="/usr/share/keyrings/docker-archive-keyring.gpg"
+wget -qO- https://download.docker.com/linux/ubuntu/gpg \
+  | gpg --dearmor \
+  | sudo tee $DOCKER_KEYRING > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=$DOCKER_KEYRING] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Add google-cloud-sdk package source
-curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" \
-  | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
-
-# Add nvidia-docker2 source
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-  && curl -fsSL https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
-  && curl -fsSL https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list \
-  | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-
-# Add openvpn3 source
-curl -fsSL https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/openvpn-repo-pkg-keyring.gpg
-curl -fsSL "https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-$(lsb_release -cs).list" \
-  | sudo tee /etc/apt/sources.list.d/openvpn3.list
-
-# Install more packages
+# Install
 sudo apt-get update
-sudo apt-get install -y --no-install-recommends \
-  code \
-  docker-ce \
-  google-cloud-sdk \
-  nvidia-cuda-toolkit \
-  nvidia-docker2 \
-  openvpn3
+sudo apt-get install -y --no-install-recommends docker-ce
 
-# Install docker compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-# Docker post-installation steps
+# Update permissions
 sudo usermod -aG docker $USER
 newgrp docker  # activate group changes
 sudo systemctl restart docker
+
+###############################################################################
+# Visual Studio Code
+###############################################################################
+
+# Set up `apt` repository
+VSCODE_KEYRING="/usr/share/keyrings/packages.microsoft.gpg"
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc \
+  | gpg --dearmor \
+  | sudo tee $VSCODE_KEYRING > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=$VSCODE_KEYRING] https://packages.microsoft.com/repos/code stable main" \
+  | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+
+# Install
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends code
+
+###############################################################################
+# User configuration
+###############################################################################
 
 # Make zsh the default shell
 sudo chsh -s $(which zsh) $(whoami)

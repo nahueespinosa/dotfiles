@@ -9,7 +9,7 @@ Powered by [dotbot](https://github.com/anishathalye/dotbot/).
 
 ## Requirements
 
-These configuration files have been tested in `Ubuntu 20.04` with:
+These configuration files have been tested in `Ubuntu 22.04` with:
 
 - `cmake 3.16.3`
 - `git 2.25.1`
